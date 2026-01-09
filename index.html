@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chúc mừng sinh nhật Na 🎂</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', Arial, sans-serif;
+      background: linear-gradient(135deg, #2b003a, #4b0066);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 40px;
+      color: #ffb6ff;
+      text-shadow: 0 0 10px #ff66ff;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+    }
+
+    input, textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      background: #ff66ff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff33ff;
+    }
+
+    .messages {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .msg {
+      background: rgba(0,0,0,0.3);
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .kuromi {
+      position: fixed;
+      width: 80px;
+      animation: float 6s infinite ease-in-out;
+      opacity: 0.9;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+      100% { transform: translateY(0); }
+    }
+
+    footer {
+      margin: 40px 0;
+      opacity: 0.7;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🎉 Chúc mừng sinh nhật Na 🎂</h1>
+
+  <div class="card">
+    <h2>💜 Gửi lời chúc cho Na 💜</h2>
+    <input id="name" placeholder="Tên của bạn">
+    <textarea id="wish" rows="4" placeholder="Lời chúc dành cho Na 💖"></textarea>
+    <br>
+    <button onclick="sendWish()">Gửi lời chúc ✨</button>
+
+    <div class="messages" id="messages"></div>
+  </div>
+
+  <!-- Kuromi decorations -->
+  <img class="kuromi" src="https://i.imgur.com/9XqYQZC.png" style="top:10%; left:5%;">
+  <img class="kuromi" src="https://i.imgur.com/9XqYQZC.png" style="top:60%; left:10%;">
+  <img class="kuromi" src="https://i.imgur.com/9XqYQZC.png" style="top:20%; right:5%;">
+  <img class="kuromi" src="https://i.imgur.com/9XqYQZC.png" style="top:70%; right:10%;">
+
+  <footer>
+    💜 Made by Cà Đẹp Trai 💜
+  </footer>
+
+  <script>
+    function sendWish() {
+      const name = document.getElementById("name").value;
+      const wish = document.getElementById("wish").value;
+
+      if (!name || !wish) {
+        alert("Nhập đầy đủ nha ae 💜");
+        return;
+      }
+
+      const msgBox = document.createElement("div");
+      msgBox.className = "msg";
+      msgBox.innerHTML = `<strong>${name}:</strong><br>${wish}`;
+
+      document.getElementById("messages").prepend(msgBox);
+
+      document.getElementById("name").value = "";
+      document.getElementById("wish").value = "";
+    }
+  </script>
+
+</body>
+</html>
