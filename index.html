@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Chúc mừng sinh nhật Na 🎂</title>
 
   <style>
     body {
       margin: 0;
-      font-family: 'Comic Sans MS', Arial, sans-serif;
+      font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #2b003a, #4b0066);
       color: white;
       text-align: center;
@@ -16,18 +16,18 @@
 
     h1 {
       margin-top: 40px;
-      font-size: 40px;
+      font-size: 38px;
       color: #ffb6ff;
       text-shadow: 0 0 10px #ff66ff;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255,255,255,0.12);
       margin: 30px auto;
       padding: 20px;
       max-width: 500px;
       border-radius: 20px;
-      box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+      box-shadow: 0 0 25px rgba(255,0,255,0.4);
     }
 
     input, textarea {
@@ -65,16 +65,18 @@
       margin-bottom: 10px;
     }
 
-    .kuromi {
+    .na-img {
       position: fixed;
-      width: 80px;
+      width: 120px;
       animation: float 6s infinite ease-in-out;
-      opacity: 0.9;
+      border-radius: 20px;
+      box-shadow: 0 0 20px pink;
+      opacity: 0.95;
     }
 
     @keyframes float {
       0% { transform: translateY(0); }
-      50% { transform: translateY(-30px); }
+      50% { transform: translateY(-25px); }
       100% { transform: translateY(0); }
     }
 
@@ -92,6 +94,7 @@
 
   <div class="card">
     <h2>💜 Gửi lời chúc cho Na 💜</h2>
+
     <input id="name" placeholder="Tên của bạn">
     <textarea id="wish" rows="4" placeholder="Lời chúc dành cho Na 💖"></textarea>
     <br>
@@ -100,14 +103,16 @@
     <div class="messages" id="messages"></div>
   </div>
 
-  <!-- Kuromi decorations -->
-  <img class="kuromi" src="https://i.imgur.com/9XqYQZC.png" style="top:10%; left:5%;">
-  <img class="kuromi" src="https://i.imgur.com/9XqYQZC.png" style="top:60%; left:10%;">
-  <img class="kuromi" src="https://i.imgur.com/9XqYQZC.png" style="top:20%; right:5%;">
-  <img class="kuromi" src="https://i.imgur.com/9XqYQZC.png" style="top:70%; right:10%;">
+  <!-- 6 ảnh Na trang trí -->
+  <img class="na-img" src="./na1.jpg" style="top:5%; left:5%;">
+  <img class="na-img" src="./na2.jpg" style="top:20%; right:5%;">
+  <img class="na-img" src="./na3.jpg" style="top:45%; left:3%;">
+  <img class="na-img" src="./na4.jpg" style="top:60%; right:6%;">
+  <img class="na-img" src="./na5.jpg" style="bottom:20%; left:8%;">
+  <img class="na-img" src="./na6.jpg" style="bottom:5%; right:5%;">
 
   <footer>
-    💜 Made by Cà Đẹp Trai 💜
+    💜 Made by bạn 💜
   </footer>
 
   <script>
@@ -116,15 +121,15 @@
       const wish = document.getElementById("wish").value;
 
       if (!name || !wish) {
-        alert("Nhập đầy đủ nha ae 💜");
+        alert("Nhập đầy đủ nha 💜");
         return;
       }
 
-      const msgBox = document.createElement("div");
-      msgBox.className = "msg";
-      msgBox.innerHTML = `<strong>${name}:</strong><br>${wish}`;
+      const msg = document.createElement("div");
+      msg.className = "msg";
+      msg.innerHTML = "<strong>" + name + ":</strong><br>" + wish;
 
-      document.getElementById("messages").prepend(msgBox);
+      document.getElementById("messages").prepend(msg);
 
       document.getElementById("name").value = "";
       document.getElementById("wish").value = "";
