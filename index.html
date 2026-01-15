@@ -1,239 +1,150 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chúc mừng sinh nhật Na 🎂</title>
+    <meta charset="UTF-8">
+    <title>Thầy Hưng Jet2Holiday - Dạy Lập Trình</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top, #4b0066, #1a001f);
-  color: white;
-  text-align: center;
-  overflow: hidden;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
 
-/* TIÊU ĐỀ */
-h1 {
-  margin-top: 90px;
-  font-size: 40px;
-  color: #ffb6ff;
-  text-shadow: 0 0 15px #ff66ff;
-  position: relative;
-  z-index: 20;
-}
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.4);
+        }
 
-/* CARD */
-.card {
-  background: rgba(255,255,255,0.12);
-  margin: 25px auto;
-  padding: 20px;
-  max-width: 500px;
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(255,0,255,0.5);
-  position: relative;
-  z-index: 15;
-}
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
 
-input, textarea {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 10px;
-  border: none;
-  font-size: 16px;
-}
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
 
-button {
-  background: #ff66ff;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
 
-button:hover {
-  background: #ff33ff;
-}
+        .section {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+        }
 
-.messages {
-  margin-top: 20px;
-  text-align: left;
-}
+        .section h2 {
+            color: #ffd166;
+            margin-top: 0;
+        }
 
-.msg {
-  background: rgba(0,0,0,0.35);
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
+        ul {
+            padding-left: 20px;
+        }
 
-/* ẢNH NA */
-.na-img {
-  position: fixed;
-  width: 120px;
-  animation: float 6s infinite ease-in-out;
-  border-radius: 20px;
-  box-shadow: 0 0 25px pink;
-  opacity: 0.9;
-  z-index: 5;
-}
+        ul li {
+            margin-bottom: 8px;
+        }
 
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-25px); }
-  100% { transform: translateY(0); }
-}
+        .quote {
+            font-style: italic;
+            text-align: center;
+            font-size: 20px;
+            margin: 40px 0;
+            color: #ffd166;
+        }
 
-/* TIM + SAO */
-.spark {
-  position: fixed;
-  font-size: 20px;
-  animation: fall linear forwards;
-  pointer-events: none;
-  z-index: 2;
-}
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            font-size: 14px;
+            opacity: 0.8;
+        }
 
-@keyframes fall {
-  from { transform: translateY(-10vh); opacity: 1; }
-  to { transform: translateY(110vh); opacity: 0; }
-}
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: #ffd166;
+            color: #000;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-/* PHÁO HOA */
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-/* FOOTER */
-footer {
-  margin: 40px 0;
-  opacity: 0.7;
-  font-size: 14px;
-  z-index: 15;
-  position: relative;
-}
-
-/* FIX ĐIỆN THOẠI */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 28px;
-    margin-top: 120px;
-  }
-
-  .na-img {
-    width: 80px;
-  }
-}
-</style>
+        .btn:hover {
+            background: #ffb703;
+        }
+    </style>
 </head>
 
 <body>
 
-<canvas id="fireworks"></canvas>
+    <header>
+        <h1>Thầy Hưng Jet2Holiday</h1>
+        <p>Người truyền cảm hứng & giảng dạy lập trình</p>
+    </header>
 
-<h1>🎉 Chúc mừng sinh nhật Na 🎂</h1>
+    <div class="container">
 
-<div class="card">
-  <h2>💜 Gửi lời chúc cho Na đi anh em 💜</h2>
-  <p style="font-size:14px;color:#ffd6ff;font-style:italic;">
-    📸 Nhớ chụp màn hình gửi lên group nha anh em 💖
-  </p>
+        <div class="section">
+            <h2>👨‍🏫 Giới thiệu</h2>
+            <p>
+                Thầy Hưng (Jet2Holiday) là một người thầy tâm huyết trong lĩnh vực lập trình.
+                Thầy không chỉ dạy kiến thức kỹ thuật mà còn giúp học sinh hiểu được tư duy
+                logic và cách giải quyết vấn đề như một lập trình viên thực thụ.
+            </p>
+        </div>
 
-  <input id="name" placeholder="Tên của bạn">
-  <textarea id="wish" rows="4" placeholder="Lời chúc dành cho Na 💖"></textarea>
-  <br>
-  <button onclick="sendWish()">Gửi lời chúc ✨</button>
-  <div class="messages" id="messages"></div>
-</div>
+        <div class="section">
+            <h2>💻 Nội dung giảng dạy</h2>
+            <ul>
+                <li>Lập trình cơ bản cho người mới bắt đầu</li>
+                <li>HTML, CSS và JavaScript</li>
+                <li>Tư duy thuật toán</li>
+                <li>Ứng dụng lập trình vào thực tế</li>
+                <li>Hướng dẫn tự học và phát triển lâu dài</li>
+            </ul>
+        </div>
 
-<!-- 6 ẢNH NA -->
-<img class="na-img" src="na1.jpg" style="top:18%; left:5%;">
-<img class="na-img" src="na2.jpg" style="top:22%; right:5%;">
-<img class="na-img" src="na3.jpg" style="top:45%; left:3%;">
-<img class="na-img" src="na4.jpg" style="top:55%; right:6%;">
-<img class="na-img" src="na5.jpg" style="bottom:20%; left:8%;">
-<img class="na-img" src="na6.jpg" style="bottom:5%; right:5%;">
+        <div class="section">
+            <h2>🔥 Phong cách giảng dạy</h2>
+            <p>
+                Phong cách dạy của thầy Hưng dễ hiểu, gần gũi và thực tế.
+                Thầy luôn khuyến khích học sinh tự suy nghĩ, đặt câu hỏi
+                và thử nghiệm thay vì chỉ học thuộc lý thuyết.
+            </p>
+        </div>
 
-<footer>💜 Made by Cà Đẹp Zai 💜</footer>
+        <div class="quote">
+            “Lập trình không khó, quan trọng là bạn có dám bắt đầu hay không.”
+        </div>
 
-<script>
-function sendWish() {
-  const name = document.getElementById("name").value;
-  const wish = document.getElementById("wish").value;
-  if (!name || !wish) return alert("Nhập đầy đủ nha anh em 💜");
+        <div class="section" style="text-align:center">
+            <h2>🚀 Bắt đầu học lập trình</h2>
+            <p>
+                Nếu bạn yêu thích công nghệ và muốn học lập trình từ những điều cơ bản,
+                hãy bắt đầu ngay hôm nay.
+            </p>
+            <a href="#" class="btn">Tìm hiểu thêm</a>
+        </div>
 
-  const msg = document.createElement("div");
-  msg.className = "msg";
-  msg.innerHTML = "<strong>" + name + ":</strong><br>" + wish;
-  document.getElementById("messages").prepend(msg);
+    </div>
 
-  document.getElementById("name").value = "";
-  document.getElementById("wish").value = "";
-}
-
-/* TIM + SAO RƠI */
-setInterval(() => {
-  const spark = document.createElement("div");
-  spark.className = "spark";
-  spark.style.left = Math.random() * 100 + "vw";
-  spark.style.animationDuration = (2 + Math.random() * 3) + "s";
-  spark.innerText = Math.random() > 0.5 ? "💖" : "✨";
-  document.body.appendChild(spark);
-  setTimeout(() => spark.remove(), 5000);
-}, 180);
-
-/* PHÁO HOA */
-const canvas = document.getElementById("fireworks");
-const ctx = canvas.getContext("2d");
-
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resize();
-window.onresize = resize;
-
-let particles = [];
-
-function firework() {
-  const x = Math.random() * canvas.width;
-  const y = Math.random() * canvas.height * 0.5;
-
-  for (let i = 0; i < 80; i++) {
-    const angle = Math.random() * Math.PI * 2;
-    const speed = Math.random() * 4 + 2;
-    particles.push({
-      x, y,
-      vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed,
-      life: 70
-    });
-  }
-}
-
-function animate() {
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  particles.forEach((p,i) => {
-    p.x += p.vx;
-    p.y += p.vy;
-    p.life--;
-    ctx.fillStyle = `hsl(${Math.random()*360},100%,70%)`;
-    ctx.fillRect(p.x,p.y,3,3);
-    if (p.life <= 0) particles.splice(i,1);
-  });
-  requestAnimationFrame(animate);
-}
-
-setInterval(firework, 700);
-animate();
-</script>
+    <footer>
+        © 2026 | Website giới thiệu thầy Hưng Jet2Holiday | HTML Demo
+    </footer>
 
 </body>
 </html>
